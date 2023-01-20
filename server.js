@@ -16,7 +16,7 @@ app.get('/*', (req,res)=>{
     params: req.query
   }
 
-  io.emmit('page-request', obj)
+  io.emit('page-request', obj)
   clientResponseRef = res;
 })
 
@@ -30,7 +30,7 @@ app.post('/*', (req,res)=>{
     params: req.body
   }
 
-  io.emmit('page-request', obj)
+  io.emit('page-request', obj)
   clientResponseRef = res;
   
 })
